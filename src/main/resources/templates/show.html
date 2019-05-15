@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/">Show All Tasks</a><br/>
+Task Title : <p th:text="${task.title}"></p><br/>
+Task Content : <p th:text="${task.content}"></p><br/>
+<a th:href="@{/delete/{id}(id=${task.id})}">Delete this chirp</a>
+</body>
+</html>

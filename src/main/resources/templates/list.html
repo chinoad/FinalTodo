@@ -7,14 +7,16 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
 </head>
 <body>
-<a button type="button" class="btn btn-outline-info" href="/add">Add a Task</a><br/>
+<a button type="submit" class="btn btn-primary" href="/add">Add a Task</a><br/>
+
+
 <table>
 
     <tr th:each="task : ${tasks}">
-        <td th:text="${task.title}"></td>
+        <td><h4 th:text="${task.title}"></h4></td>&nbsp;
         <td th:text="${task.content}"></td>
         <td>
-            <a th:href="@{/update/{id}(id=${task.id})}">Update</a> ~
+            <a th:href="@{/update/{id}(id=${task.id})}">&nbsp;Update</a> ~
             <a th:href="@{/delete/{id}(id=${task.id})}">Delete</a>
 
         </td>
